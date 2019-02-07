@@ -285,7 +285,7 @@ void SValue::setProperty(int ix, const QVariant &val)
 
 QString SValue::dataHex() const
 {
-	return QString::number((long)d.data(), 16);
+        return QString::number((intptr_t)d.data(), 16);
 }
 
 QVariant SValue::variantCast() const
